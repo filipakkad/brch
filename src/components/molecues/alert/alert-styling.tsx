@@ -40,7 +40,7 @@ export const AlertContent = styled.div`
   align-self: stretch;
   flex-grow: 0;
   width: 244px;
-`
+`;
 
 export const AlertBody = styled.div`
 	text-align: left;

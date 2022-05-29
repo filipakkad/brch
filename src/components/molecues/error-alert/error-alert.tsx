@@ -1,15 +1,11 @@
 import React from "react";
-import { Alert } from "../alert/alert";
+import { Alert, AlertProps } from "../alert/alert";
 import { faExclamationCircle } from "@fortawesome/free-solid-svg-icons";
 import { library } from "@fortawesome/fontawesome-svg-core";
 
 library.add(faExclamationCircle);
 
-type ErrorAlertProps = {
-	heading: string;
-	body: string;
-	isVisible: boolean;
-};
+type ErrorAlertProps = Pick<AlertProps, "heading" | "body" | "isVisible">;
 
 const ErrorAlert = (props: ErrorAlertProps) => {
 	const { heading, body, isVisible } = props;

@@ -1,15 +1,11 @@
 import React from "react";
-import { Alert } from "../alert/alert";
+import { Alert, AlertProps } from "../alert/alert";
 import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 import { library } from "@fortawesome/fontawesome-svg-core";
 
 library.add(faInfoCircle);
 
-type InfoAlertProps = {
-	heading: string;
-	body: string;
-	isVisible: boolean;
-};
+type InfoAlertProps = Pick<AlertProps, "heading" | "body" | "isVisible">;
 
 const InfoAlert = (props: InfoAlertProps) => {
 	const { heading, body, isVisible } = props;
